@@ -64,16 +64,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BodyPart.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\SnakeHead.cs" />
     <Compile Include="Assets\Scripts\SwipeControls.cs" />
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>D:/Xamk University/SnakeGame/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>D:/Xamk University/SnakeGame/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Mobile.AndroidLogcat.Editor">
       <HintPath>D:/Xamk University/SnakeGame/Library/ScriptAssemblies/Unity.Mobile.AndroidLogcat.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>D:/Xamk University/SnakeGame/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ARModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
