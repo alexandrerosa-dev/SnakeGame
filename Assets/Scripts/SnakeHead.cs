@@ -15,7 +15,9 @@ public class SnakeHead : BodyPart
     // Update is called once per frame
     void Update()
     {
-        
+        SetMovement(movement);
+        UpdateDirection();
+        UpdatePosition();
     }
 
     void SwipeDetection(SwipeControls.SwipeDirection direction)
@@ -39,21 +41,21 @@ public class SnakeHead : BodyPart
 
     void MoveUp()
     {
-        movement = Vector2.up * GameController.instance.snakeSpeed;
+        movement = Vector2.up * GameController.instance.snakeSpeed * Time.deltaTime;
     }
 
     void MoveDown()
     {
-        movement = Vector2.down * GameController.instance.snakeSpeed;
+        movement = Vector2.down * GameController.instance.snakeSpeed * Time.deltaTime;
     }
 
     void MoveLeft()
     {
-        movement = Vector2.left * GameController.instance.snakeSpeed;
+        movement = Vector2.left * GameController.instance.snakeSpeed * Time.deltaTime;
     }
 
     void MoveRight()
     {
-        movement = Vector2.right * GameController.instance.snakeSpeed;
+        movement = Vector2.right * GameController.instance.snakeSpeed * Time.deltaTime;
     }
 }
