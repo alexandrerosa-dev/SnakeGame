@@ -6,7 +6,16 @@ public class BodyPart : MonoBehaviour
 {
     Vector2 dPosition; // Delta position. It changes de position of the sprites direction
 
+    public BodyPart following = null;
 
+    private bool isTail = false;
+
+    private SpriteRenderer spriteRenderer = null;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -40,5 +49,17 @@ public class BodyPart : MonoBehaviour
             gameObject.transform.localEulerAngles = new Vector3(0, 0, 90);
         else if (dPosition.x > 0) // right
             gameObject.transform.localEulerAngles = new Vector3(0, 0, -90);
+    }
+
+    public void TurnIntoTail()
+    {
+        isTail = true;
+        spriteRenderer.sprite = GameController.instance.tailSprite;
+    }
+
+    public void TurnIntoBodyPart()
+    {
+        isTail = false;
+        spriteRenderer.sprite = GameController.instance.bodySprite;
     }
 }
